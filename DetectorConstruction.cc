@@ -354,8 +354,8 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
                  fNofSlab,        // number of replica
                  SlabWidth);  // witdth of replica
   
-  
- fScoringVolume = Panel4LV;
+  // A quoi sert le replica au dessus ?? 
+ fScoringVolume = Panel4LV; // On a pas besoin du scoring volume donc peut on l'effacer ? 
  
   // Set Shape2 as scoring volume
   //
