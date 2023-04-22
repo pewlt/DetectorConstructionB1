@@ -3,7 +3,7 @@
 
 #include "G4VSensitiveDetector.hh"
 
-#include "MyHit.hh"
+#include "ScintHit.hh"
 
 #include <vector>
 
@@ -35,7 +35,7 @@ class ScintillatorSD : public G4VSensitiveDetector
     void   EndOfEvent(G4HCofThisEvent* hitCollection) override;
 
   private:
-    CalorHitsCollection* fHitsCollection = nullptr;
+    SlabHitsCollection* fHitsCollection = nullptr;
     G4int fNofCells = 0;
 };
 
