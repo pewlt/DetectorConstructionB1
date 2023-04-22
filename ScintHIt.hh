@@ -15,8 +15,23 @@ class SlabHit
         SlabHit() = default;
         SlabHit(const CalorHit&) = default;
         ~SlabHit() override = default;
-
         
+        //Operators
+        ScintHit& operator = (const ScintHit&) = default;
+        G4bool operator == (const ScintHit&) const;
+        // A quoi vont servir les operators ? 
+        
+        inline void* operator new(size_t); //What is size_t ?
+        inline void operator delete(void*);
+        
+        //Methods from base class
+        void Draw()  override{}
+        void Print() override;
+
+        //Methods to handle data
+        void Add(G4double de, G4double dl);
+
+        //Get methods 
         G4double GetEdep() {return fEdep;};
         void SetEdep(double edep) {fEdep = edep;};
         
@@ -40,3 +55,4 @@ class SlabHit
 using SlabHitsCollection = G4THitsCollection<SlabHit>;
 
 #endif
+//+++ tout ce qui concerne CalorHitAllocator -> Recherche/comprendre si on en a besoin 
