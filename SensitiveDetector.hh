@@ -1,4 +1,4 @@
-#ifndef B1DetectorConstruction_h
+#ifndef B1DetectorConstruction_h //A CHANGER ?? Je ne sais pas quoi mettre
 #define B1DetectorConstruction_h 1
 
 #include "G4VSensitiveDetector.hh"
@@ -41,6 +41,6 @@ class ScintillatorSD : public G4VSensitiveDetector
 
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
 
 #endif
