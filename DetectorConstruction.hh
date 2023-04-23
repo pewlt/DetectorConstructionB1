@@ -25,7 +25,9 @@ class DetectorConstruction : public G4VUserDetectorConstruction
     void DefineMaterials();
     G4VPhysicalVolume* DefineVolumes();
 
- 
+    G4bool fCheckOverlaps = true; // option to activate checking of volumes overlaps
+    G4int  fNofLayers = -1;
+
 };
 
 }
