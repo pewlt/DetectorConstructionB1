@@ -20,11 +20,11 @@ ScintillatorSD::ScintillatorSD(const G4String& name,
 }
 
 
-void CalorimeterSD::Initialize(G4HCofThisEvent* hce)
+void ScintillatorSD::Initialize(G4HCofThisEvent* hce)
 {
   // Create hits collection
   fHitsCollection
-    = new CalorHitsCollection(SensitiveDetectorName, collectionName[0]);
+    = new SlabHitsCollection(SensitiveDetectorName, collectionName[0]);
 
   // Add this collection in hce
   auto hcID
