@@ -19,15 +19,16 @@ class DetectorConstruction : public G4VUserDetectorConstruction
     ~DetectorConstruction() override = default;
 
     G4VPhysicalVolume* Construct() override;
+    void MyDetectorConstruction::ConstructSDandField() override;
+  private:
+    //Methods
+    void DefineMaterials();
+    G4VPhysicalVolume* DefineVolumes();
 
-    G4LogicalVolume* GetScoringVolume() const { return fScoringVolume; }
-
-  protected:
-    G4LogicalVolume* fScoringVolume = nullptr;
+ 
 };
 
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 #endif
