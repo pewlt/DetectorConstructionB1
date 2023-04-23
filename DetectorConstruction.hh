@@ -22,7 +22,6 @@ class DetectorConstruction : public G4VUserDetectorConstruction
     void MyDetectorConstruction::ConstructSDandField() override;
   private:
     //Methods
-    void DefineMaterials();
     G4VPhysicalVolume* DefineVolumes();
 
     G4bool fCheckOverlaps = true; // option to activate checking of volumes overlaps
